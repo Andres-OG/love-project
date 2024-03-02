@@ -1,38 +1,449 @@
-.App {
+/* Estilos generales */
+
+:root {
+  --verde: rgba(44, 82, 52, 0.70);
+  --dorado: rgba(156, 132, 18, 0.70);
+  --negro: #000;
+  --button-letter-size: 1.7rem; 
+  --tamaño-img-w: auto;
+  --tamaño-img-h: 100%;
+}
+
+/* Importación de fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+
+/* Estilos generales para el cuerpo del documento */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Estilos para el encabezado */
+
+header {
+  width: 100%;
+}
+
+/* Estilos para el pie de página */
+
+footer {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Clases de utilidad */
+
+.quitar-margin {
+  margin: 0;
+}
+
+.centrar-texto {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.w2 {
+  font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilos específicos para los botones */
+
+.btn {
+  width: 50%;
+  padding: 2rem;
+  background-color: white;
+  border: none;
+  border-radius:  2rem;
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilos para títulos y texto en la sección de foto */
+
+.titulos-foto {
+  font-size: 13rem;
+  margin: 0;
+  padding: 0;
+}
+
+.text-foto {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para la página de inicio */
+
+.flex {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+/* Estilos para la sección de la foto */
+
+.foto {
+  width: var(--tamaño-img-w);
+  height: var(--tamaño-img-h);
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.fondo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: brightness(30%);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.fondo-foto {
+  width: 100%;
+  height: 100%;
+}
+
+.cont {
+  height: 100%;
+  display: flex;
+  gap: 5rem;
+  padding: 10rem;
+  color: #fff;
+  justify-content: space-around;
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.con-car {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.con-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  max-width: 90%;
+  justify-content: center;
+}
+
+.cont-foto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+/* Estilos para el carrusel */
+
+.carousel {
+  width: 60rem;
+  height: 78rem;
+  box-shadow: 2rem 2rem 2rem rgba(0,0, 0, 0.7);
+  border-radius: 5rem;
+}
+
+.carousel-cont {
+  gap: 2rem;
+  width: 100%;
+}
+
+.carousel-cont img {
+  width: 100%;
+  height: 78rem;
+  object-fit: cover;
+  border-radius: 5rem;
+}
+
+.slick-slide {
+  margin: 0 0.5rem;
+}
+
+.slick-list {
+  height: 78rem;
+}
+
+/* Estilos para la sección de juegos */
+
+.cont-games {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+}
+
+.cont-games h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.games {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0rem 0rem 1rem rgba(0,0, 0, 0.7);
+  font-family: 'Poppins', sans-serif;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  width: 30rem;
+  height: 20rem;
+  gap: 2rem;
+}
+
+/* Estilos para los filtros de los juegos */
+
+.filtro-games {
+    position: absolute;
+    width: 30rem;
+    height: 20rem;
+    filter: brightness(50%);
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+    z-index: -1;
+}
+
+.btn__games {
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border: 1px solid white;
+  border-radius:  2rem;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn__games:hover {
+  background-color: white;
+  color: black;
+  scale: 1.05;
+}
+
+.games-flex {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilos para la galería */
+
+.galeria-flex {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-gap: 2rem;
+  width: 90%;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.galeria {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+}
+
+.filtro-galeria {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: brightness(30%);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.fotito {
+  width: 40rem;
+  height: 60rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección de recuerdos */
+
+.cont-recuerdos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/src/img/fondo1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 5rem;
+}
+
+.recuerdos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.recuerdo {
+  object-fit: cover;
+}
+
+.recuerdo:hover::before {
+  transition: all 0.3s ease-in-out;
+  filter: brightness(30%);
+}
+
+.titulos-recuerdos {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.texto-recuerdos {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para la sección final */
+
+.final {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.pregunta {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input {
+  padding: 1rem;
+  background-color: #d2d2d2;
+  border: 1px solid white;
+  border-radius:  2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn--juego {
+  width: 50%;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn--juego:hover {
+  scale: 1.05;
 }
 
-@keyframes App-logo-spin {
+/* Animaciones */
+
+@keyframes aparecer {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Estilos para la ventana flotante */
+
+.ventana-flotante {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 5rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+  display: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif; 
+  animation: aparecer 0.5s ease forwards;
+}
+
+.ventana-flotante.visible {
+  display: block;
+}
+
+.ventana-flotante .contenido {
+  text-align: justify;
+  color: black;
+}
+
+.ventana-flotante .contenido button {
+  background-color: transparent;
+  border: #fff 1px solid;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .cont {
+    flex-direction: column;
+  }
+  
+  .con-texto {
+    gap: 2rem;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 80%;
   }
 }
