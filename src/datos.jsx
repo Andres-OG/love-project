@@ -14,7 +14,7 @@ import rec1 from "./img/rec1.jpeg";
 import rec2 from "./img/rec2.jpeg";
 import rec3 from "./img/rec3.jpeg";
 import rec4 from "./img/rec4.jpeg";
-
+import rec5 from "./img/rec5.jpeg";
 import rec7 from "./img/rec7.jpeg";
 import rec8 from "./img/rec8.jpeg";
 import rec9 from "./img/rec9.jpeg";
@@ -113,6 +113,12 @@ export const recuerdos = [
       "Me encanta tu manita, es tan bonita. Aún sigue viva y en perfecto estado(:",
   },
   {
+    id: 5, 
+    url: rec5,
+    nombre: "Cuando me enseñaste a quitarme la pulsera",
+    descripcion: "No sabía que era tan fácil jajaja",
+  },
+  {
     id: 5,
     url: rec10,
     nombre: "Nuestras pulseritas",
@@ -127,7 +133,7 @@ export const recuerdos = [
   {
     id: 7,
     url: rec8,
-    nombre: "Nustra primera mojada jaja",
+    nombre: "Nuestra primera mojada jaja",
     descripcion:
       "No fue la peor, de esa no hay foto jajaja, pero sí fue la primera.",
   },

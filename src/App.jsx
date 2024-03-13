@@ -51,13 +51,8 @@ function Foto() {
       <div className='cont'>
         <div className='textos'>
           <div className='con-texto'>
-            <div>
-              <h3 className='titulos-foto'>{datos[data].nombre}</h3>
-              <p className='text-foto w2'>{datos[data].descripcion}</p>
-            </div>
-            <div>
-              <button className='btn'>Ver más</button>
-            </div>
+            <h3 className='titulos-foto'>{datos[data].nombre}</h3>
+            <p className='text-foto w2'>{datos[data].descripcion}</p>
           </div>
           <div className='con-car'>
           </div>
@@ -128,7 +123,7 @@ function Games( {titulo, desc, fondo, accion} ) {
   return(
       <div className='games'>
         <div className='filtro-games' style={{ backgroundImage: `url(${fondo})` }}></div>
-        <h3 className='quitar-margin centrar-texto'>{titulo}</h3>
+        <h3 className='quitar-margin centrar-texto titulos'>{titulo}</h3>
         <p className='quitar-margin centrar-texto'>{desc}</p>
         <button className='btn btn__games' onClick={accion}>Jugar</button>
       </div>
@@ -138,7 +133,7 @@ function Games( {titulo, desc, fondo, accion} ) {
 function Parte3( {bandera} ) {
   return (
     <div className='cont-recuerdos'>
-      <h2 className='titulos-foto'>Recuerdos</h2>
+      <h2 className='quitar-margin centrar-texto titulos'>Recuerdos</h2>
       <div className='recuerdos'>
       {recuerdos.map((rec) => (
         <div key={rec.id} className=''>
@@ -153,26 +148,67 @@ function Parte3( {bandera} ) {
 function Parte4() {
   return (
     <div className='final'>
-      <h2 className='titulos-foto'>¡Te amo!</h2>
-      <p className='text-foto'><strong>Nota: </strong>Cada viernes habrá una actualización(:</p>
+      <h2 className='titulos quitar-margin size-2'>¡Te amo!</h2>
+      <p className='size-1'><strong>Nota: </strong>Cada viernes habrá una actualización(:</p>
     </div>
   );
 }
 
-function Recuerdos({nombre, img, descripcion}) {
+function Recuerdos({ nombre, img, descripcion }) {
+  const [hovered, setHovered] = React.useState(false);
+
+  const fotoWrapperStyle = {
+    position: 'relative',
+    display: 'inline-block',
+  };
+
+  const textoOverlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    borderRadius: '2rem',
+    color: 'white',
+    opacity: hovered ? 1 : 0,
+    transition: 'opacity 0.3s',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
+  const tituloStyle = {
+    opacity: hovered ? 1 : 0,
+    transition: 'opacity 0.3s',
+    fontSize: '4rem',
+  };
+
+  const textStyle = {
+    opacity: hovered ? 1 : 0,
+    transition: 'opacity 0.3s',
+    fontSize: '1.3rem',
+  };
+
   return (
-    <div className='recuerdo'>
-      <h3 className='titulos-recuerdos'>
-        {nombre}
-      </h3>
-      <Fotos img={img} />
-      <p className='texto-recuerdos'>
-        {descripcion}
-      </p>
+    <div className='recuerdo' onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+      <div style={fotoWrapperStyle}>
+        <Fotos img={img}/>
+        <div style={textoOverlayStyle}>
+          <div className='centrar-div'>
+            <h3 className='titulos-recuerdos quitar-margin' style={tituloStyle}>
+              {nombre}
+            </h3>
+            <p className='texto-recuerdos' style={textStyle}>
+              {descripcion}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
-
 }
+
 
 function Fotos({img}){
   return (

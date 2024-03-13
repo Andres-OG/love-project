@@ -55,6 +55,21 @@ footer {
   font-weight: 300;
 }
 
+.size-1 {
+  font-size: 1.5rem;
+}
+
+.size-2 {
+  font-size: 2rem;
+}
+
+.titulos {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+
+}
+
 /* Estilos específicos para los botones */
 
 .btn {
@@ -141,7 +156,7 @@ footer {
 .con-texto {
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 3rem;
   max-width: 90%;
   justify-content: center;
 }
@@ -294,7 +309,7 @@ footer {
   height: 60rem;
   object-fit: cover;
   border-radius: 2rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos para la sección de recuerdos */
@@ -306,10 +321,10 @@ footer {
   gap: 5rem;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/img/fondo1.jpeg);
+  background-color: #f2f1f1;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: #000;
   padding: 5rem;
 }
 
@@ -348,10 +363,10 @@ footer {
 .final {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 5rem;
 }
 
 .pregunta {
@@ -406,6 +421,7 @@ footer {
 
 .ventana-flotante {
   background-color: white;
+  background-color: #d2d2d2;
   border-radius: 2rem;
   padding: 5rem;
   z-index: 1000;
@@ -415,6 +431,7 @@ footer {
   background-size: cover;
   font-family: 'Poppins', sans-serif; 
   animation: aparecer 0.5s ease forwards;
+  margin-top: 10rem;
 }
 
 .ventana-flotante.visible {
@@ -424,6 +441,14 @@ footer {
 .ventana-flotante .contenido {
   text-align: justify;
   color: black;
+}
+
+
+.centrar-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5rem;
 }
 
 /* Media queries */
