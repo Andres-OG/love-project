@@ -115,7 +115,7 @@ function ParteDos() {
       <div className='games-flex'>
         <Games titulo="Pregunta" desc="Si contestas bien la pregunta te ganas un premio" fondo={nutria} accion={() => mostrarDiv(1)}/>
         <Games titulo="Ordena" desc="Si ordenas bien la secuencia te ganas un premio" fondo={amren}  accion={() => mostrarDiv(2)}/>
-        <Games titulo="Pregunta" desc="Si contestas bien la pregunta te ganas un premio" fondo={libros}  accion={() => mostrarDiv(3)}/>
+        <Games titulo="Misteriosa" desc="Si contestas bien la pregunta te ganas un premio" fondo={libros}  accion={() => mostrarDiv(3)}/>
       </div>
       {mostrarNuevoDiv && juego === 1 && <Pregunta />}
       {mostrarNuevoDiv && juego === 2 && <Ordena />}
@@ -295,7 +295,7 @@ function VentanaFlotante({ mensaje, onClose, juego }) {
         }
         <p><strong>{mensaje.team}</strong></p>
         <p><strong>{mensaje.final}</strong></p>
-        <button className="btn btn--juego" onClick={onClose}>Cerrar</button>
+        <button className="btn btn--cerrar" onClick={onClose}>Cerrar</button>
       </div>
     </div>
   );

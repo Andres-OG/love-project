@@ -380,6 +380,13 @@ footer {
   color: white;
 }
 
+.btn--cerrar {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  width: 20%;
+}
+
 .btn--juego:hover {
   scale: 1.05;
 }
@@ -417,11 +424,6 @@ footer {
 .ventana-flotante .contenido {
   text-align: justify;
   color: black;
-}
-
-.ventana-flotante .contenido button {
-  background-color: transparent;
-  border: #fff 1px solid;
 }
 
 /* Media queries */
