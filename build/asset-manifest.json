@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/love-project/build/static/css/main.c55986b0.css",
-    "main.js": "/love-project/build/static/js/main.a783538b.js",
+    "main.css": "/love-project/build/static/css/main.5c07f1d2.css",
+    "main.js": "/love-project/build/static/js/main.d4f50a9b.js",
     "static/js/453.52892059.chunk.js": "/love-project/build/static/js/453.52892059.chunk.js",
     "static/media/amren.avif": "/love-project/build/static/media/amren.5a1da076746caa3aa306.avif",
     "static/media/nutria.jpg": "/love-project/build/static/media/nutria.f2292a556bf4af2c92c9.jpg",
@@ -14,13 +14,13 @@
     "static/media/rec1.jpeg": "/love-project/build/static/media/rec1.1560a2ede72ad2f3d68a.jpeg",
     "static/media/3.jpeg": "/love-project/build/static/media/3.0c1af3803e6939e646e8.jpeg",
     "static/media/rec2.jpeg": "/love-project/build/static/media/rec2.5877fe534fe2f948bef6.jpeg",
+    "static/media/rec5.jpeg": "/love-project/build/static/media/rec5.c15ab09af0d1f411cb70.jpeg",
     "static/media/4.jpeg": "/love-project/build/static/media/4.def272e58915f409a41c.jpeg",
     "static/media/9.jpeg": "/love-project/build/static/media/9.d4bbc4b923365cc0337b.jpeg",
     "static/media/rec7.jpeg": "/love-project/build/static/media/rec7.91b267d74f2dbcf85d34.jpeg",
     "static/media/2.jpeg": "/love-project/build/static/media/2.b484e5b558324e011de6.jpeg",
     "static/media/1.jpeg": "/love-project/build/static/media/1.279121b7ac22db295c69.jpeg",
     "static/media/rec3.jpeg": "/love-project/build/static/media/rec3.c109ae781f3d629bfce2.jpeg",
-    "static/media/fondo1.jpeg": "/love-project/build/static/media/fondo1.c463afc1405705e6c6e6.jpeg",
     "static/media/oso.jpg": "/love-project/build/static/media/oso.8340eb93634eccc7ce3b.jpg",
     "static/media/rec10.jpeg": "/love-project/build/static/media/rec10.fa8b2a73c9348d9e31f1.jpeg",
     "static/media/11.jpeg": "/love-project/build/static/media/11.b2325e319c64e18a5f1b.jpeg",
@@ -32,12 +32,12 @@
     "static/media/slick.ttf": "/love-project/build/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/love-project/build/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/love-project/build/index.html",
-    "main.c55986b0.css.map": "/love-project/build/static/css/main.c55986b0.css.map",
-    "main.a783538b.js.map": "/love-project/build/static/js/main.a783538b.js.map",
+    "main.5c07f1d2.css.map": "/love-project/build/static/css/main.5c07f1d2.css.map",
+    "main.d4f50a9b.js.map": "/love-project/build/static/js/main.d4f50a9b.js.map",
     "453.52892059.chunk.js.map": "/love-project/build/static/js/453.52892059.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c55986b0.css",
-    "static/js/main.a783538b.js"
+    "static/css/main.5c07f1d2.css",
+    "static/js/main.d4f50a9b.js"
   ]
 }
