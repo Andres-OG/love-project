@@ -10,7 +10,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import nutria from './img/nutria.jpg'
-import oso from './img/oso.jpg'
 import amren from './img/amren.avif'
 import libros from './img/libros.jpeg'
 
@@ -73,8 +72,6 @@ const HorizontalCarousel = ({data, set}) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '80px',
     arrows: true,
     beforeChange: () => data >= datos.length-1 ? set(0) : set(data + 1),
   };
@@ -83,7 +80,7 @@ const HorizontalCarousel = ({data, set}) => {
     <Slider {...settings} className='carousel'>
       {datos.map((data) => (
         <div key={data.id} className='carousel-cont'>
-          <img className='carousel-cont-img' src={data.url} alt="" />
+          <img src={data.url} alt="" />
         </div>
       ))}
     </Slider>

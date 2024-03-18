@@ -5,7 +5,7 @@
   --dorado: rgba(156, 132, 18, 0.70);
   --negro: #000;
   --button-letter-size: 1.7rem; 
-  --tamaño-img-w: auto;
+  --tamaño-img-w: 100%;
   --tamaño-img-h: 100%;
 }
 
@@ -132,15 +132,19 @@ footer {
 }
 
 .cont {
+  width: 100%;
   height: 100%;
   display: flex;
   gap: 5rem;
   padding: 10rem;
   color: #fff;
-  justify-content: space-around;
+  align-items: center;
+  border-radius: 5rem;
+  justify-content: center;
 }
 
 .textos {
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,52 +161,108 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 90%;
+  max-width: 100%;
   justify-content: center;
 }
 
 .cont-foto {
+  width: 26%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-size: cover;
+  border-radius: 5rem;
+}
+
+.slick-list {
+  border-radius: 5rem;
 }
 
 /* Estilos para el carrusel */
-
 .carousel {
-  width: 60rem;
-  height: 78rem;
+  width: 100%;
+  height: 100%;
   box-shadow: 2rem 2rem 2rem rgba(0,0, 0, 0.7);
   border-radius: 5rem;
 }
 
 .carousel-cont {
-  gap: 2rem;
   width: 100%;
 }
 
 .carousel-cont img {
   width: 100%;
-  height: 78rem;
-  object-fit: cover;
+  height: 100%;
   border-radius: 5rem;
 }
 
-.slick-slide {
-  margin: 0 0.5rem;
+@media (max-width: 768px) {
+  .carousel {
+    height: 100%;
+  }
+  .cont {
+    flex-direction: column;
+    padding: 5rem;
+  }
+  .textos {
+    width: 100%;
+  }
+  .cont-foto {
+    width: 80%;
+  }
+  .titulos-foto {
+    font-size: 3rem;
+  }
+  .text-foto {
+    font-size: 1.5rem;
+  }
 }
 
-.slick-list {
-  height: 78rem;
+@media (min-width: 768px) and (max-width: 992px)  {
+  .carousel {
+    height: 100%;
+  }
+  .cont {
+    flex-direction: column;
+    padding: 10rem;
+  }
+  .textos {
+    width: 100%;
+  }
+  .cont-foto {
+    width: 100%;
+  }
+  .titulos-foto {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .carousel {
+    height: 100%;
+  }
+  .cont {
+    flex-direction: column;
+    padding: 13rem;
+  }
+  .textos {
+    width: 100%;
+  }
+  .cont-foto {
+    width: 100%;
+  }
+  .titulos-foto {
+    font-size: 7rem;
+  }
 }
 
 /* Estilos para la sección de juegos */
 
 .cont-games {
   width: 100%;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   gap: 5rem;
   justify-content: center;
@@ -269,6 +329,7 @@ footer {
   display: flex;
   gap: 3rem;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -449,28 +510,4 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   padding: 5rem;
-}
-
-/* Media queries */
-
-@media (max-width: 768px) {
-  .cont {
-    flex-direction: column;
-  }
-  
-  .con-texto {
-    gap: 2rem;
-  }
-
-  .carousel {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .btn {
-    width: 80%;
-  }
 }
